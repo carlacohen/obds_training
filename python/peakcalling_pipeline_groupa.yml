@@ -1,0 +1,12 @@
+queue: all.q
+
+picard:
+    memory: 8
+    genome: /ifs/mirror/genomes/plain/mm10.fasta
+
+samtools:
+    flags: -f 0x2 -F 0x4 #-f means keep, -F means throw out
+    chromosomes: chr5
+
+bedtools:
+    blacklist: /ifs/obds-training/jan21/exercises/peakcalling/data/proatac_combined_greenleaf_encode_blacklist_mm10.bed

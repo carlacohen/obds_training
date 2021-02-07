@@ -1,0 +1,12 @@
+hisat2:
+    threads: 12
+    genome: /ifs/mirror/genomes/hisat2/mm10
+    options: --rna-strandness RF
+
+picard:
+    genome: /ifs/mirror/genomes/plain/mm10.fasta
+
+feature_counts:
+    gtf: /ifs/obds-training/jan21/shared/linux/rnaseq/genes.gtf.gz
+    options: -p -s2
+    threads: 12

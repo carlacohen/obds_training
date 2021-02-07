@@ -1,0 +1,12 @@
+queue: all.q
+
+picard:
+    memory: 8
+    genome: /ifs/mirror/genomes/plain/mm10.fasta
+
+macs2:
+    genome: mm
+
+
+
+blacklist: /ifs/obds-training/jan21/exercises/peakcalling/data/proatac_combined_greenleaf_encode_blacklist_mm10.bed

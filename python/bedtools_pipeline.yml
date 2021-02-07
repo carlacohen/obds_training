@@ -1,0 +1,3 @@
+distance: 500
+
+refseq_TSS: /ifs/obds-training/jan21/carla/bedtools/refseq_genes_TSS.bed

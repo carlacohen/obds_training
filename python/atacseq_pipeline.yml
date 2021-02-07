@@ -1,0 +1,11 @@
+queue: all.q
+
+bowtie2:
+    index: /ifs/mirror/genomes/bowtie/mm10
+    threads: 12
+    options: --local --very-fast-local
+    memory: 2G
+
+picard:
+    memory: 8
+    genome: /ifs/mirror/genomes/plain/mm10.fasta

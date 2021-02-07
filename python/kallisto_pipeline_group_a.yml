@@ -1,0 +1,7 @@
+kallisto_index:
+    genome_fasta: Mus_musculus.GRCm38.cdna.all.fa.gz
+
+kallisto_quant:
+    threads: 12
+    bootstraps: 10
+    options: --rf-stranded
