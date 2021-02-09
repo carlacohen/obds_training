@@ -9,6 +9,7 @@ Input files:
 
 Output files:
     Text files of regions in ML bed that intersect within specified distance of TSS
+    NB by adding %(distance)s.txt to the outfile name you get the distance in the file name for easy reference.
 
 Usage: bedtools window -w [distance] -a input_ML -b refseq_genes_TSS.bed'''
 
@@ -21,14 +22,14 @@ from cgatcore import pipeline as P
 params = P.get_parameters("bedtools_pipeline.yml")
 
 @mkdir("outputs")
-@transform('*.chr5.bed',
-            regex(r'(.*).chr5.bed'),
-            r'outputs/\1.chr5_TSS.txt')
+@transform('*_chr5.bed',
+            regex(r'(.*)_chr5.bed'),
+            r'outputs/\1_chr5_TSS')
 def bedtools_window(infile, outfile):
     statement = """bedtools window -w %(distance)s
                 -a %(infile)s
                 -b %(refseq_TSS)s
-                > %(outfile)s"""
+                > %(outfile)s.%(distance)s.txt"""
     P.run(statement)
 
 
